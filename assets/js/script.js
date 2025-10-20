@@ -58,21 +58,20 @@ const teamMembers = [
 const gridEl = document.getElementById("teamGrid");
 // Ciclo per ogni membro del team
 for (let i = 0; i < teamMembers.length; i++) {
-  const member = teamMembers[i];
+  const { name, role, email, img } = teamMembers[i]; // destructuring
 
-  // Creo la card base
   const cardHTML = `
     <div class="col">
-      <div class="card h-100 border-0">
+      <div class="card h-100 shadow-sm border-0">
         <div class="row g-0">
           <div class="col-4">
-            <img src="${member.img}" class="img-fluid object-fit-cover">
+            <img src="${img}" alt="Foto di ${name}" class="img-fluid w-100 h-100 object-fit-cover">
           </div>
           <div class="col-8">
             <div class="bg-dark text-white h-100 p-3 d-flex flex-column justify-content-center">
-              <h2 class="h5 text-uppercase fw-bold mb-1">${member.name}</h2>
-              <div class="small opacity-75 mb-1">${member.role}</div>
-              <a class="small text-info text-decoration-none" href="mailto:${member.email}">${member.email}</a>
+              <h2 class="h5 text-uppercase fw-bold mb-1">${name}</h2>
+              <div class="small opacity-75 mb-1">${role}</div>
+              <a class="small text-info text-decoration-none" href="mailto:${email}">${email}</a>
             </div>
           </div>
         </div>
