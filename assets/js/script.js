@@ -56,3 +56,30 @@ const teamMembers = [
 
 // Prendo l'elemento del DOM dove inserire le card
 const gridEl = document.getElementById("teamGrid");
+// Ciclo per ogni membro del team
+for (let i = 0; i < teamMembers.length; i++) {
+  const member = teamMembers[i];
+
+  // Creo la card base
+  const cardHTML = `
+    <div class="col">
+      <div class="card h-100 border-0">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="${member.img}" class="img-fluid object-fit-cover">
+          </div>
+          <div class="col-8">
+            <div class="bg-dark text-white h-100 p-3 d-flex flex-column justify-content-center">
+              <h2 class="h5 text-uppercase fw-bold mb-1">${member.name}</h2>
+              <div class="small opacity-75 mb-1">${member.role}</div>
+              <a class="small text-info text-decoration-none" href="mailto:${member.email}">${member.email}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Aggiungo la card al contenitore
+  gridEl.innerHTML += cardHTML;
+}
