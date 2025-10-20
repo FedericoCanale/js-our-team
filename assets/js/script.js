@@ -54,4 +54,5 @@ const teamMembers = [
   }
 ];
 
-
+// Prendo l'elemento del DOM dove inserire le card
+const gridEl = document.getElementById("teamGrid");
