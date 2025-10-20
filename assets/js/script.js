@@ -1,3 +1,20 @@
+/* to do list
+•	Crea l’array teamMembers
+•	Uso lo spread per creare una copia con un id
+•	Uso un ciclo for...of per creare e stampare le card nel DOM
+•	Uso il destructuring per leggere le proprietà di ogni oggetto
+
+Tools
+	•	HTML5 
+	•	Bootstrap 
+	•	JavaScript 
+	•	Destructuring 
+	•	Spread Operator 
+	•	for…of 
+
+
+*/
+
 const teamMembers = [
   {
     name: "Marco Bianchi",
